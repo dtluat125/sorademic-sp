@@ -25,4 +25,11 @@ module.exports = defineConfig({
       .use("vue-svg-loader")
       .loader("vue-svg-loader");
   },
+  css: {
+    loaderOptions: {
+      scss: {
+        additionalData: `@import "@/styles/custom-var.scss";`,
+      },
+    },
+  },
 });

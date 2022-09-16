@@ -45,7 +45,6 @@ import { Search, BellFilled } from "@element-plus/icons-vue";
   width: 100%;
   margin: auto;
   z-index: 10;
-  width: 100vw;
 }
 .app-bar {
   height: 90px;

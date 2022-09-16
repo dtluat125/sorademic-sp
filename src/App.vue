@@ -35,6 +35,7 @@ nav {
 
 * {
   margin: 0;
+  vertical-align: middle;
 }
 
 .app-wrapper {

@@ -27,7 +27,7 @@
             <div>
               <el-button class="edit-btn">
                 <el-space :size="8">
-                  <el-icon :size="22"><PenIcon /></el-icon> Chỉnh sửa trang
+                  <el-icon :size="22"><SmallPenIcon /></el-icon> Chỉnh sửa trang
                 </el-space>
               </el-button>
             </div>
@@ -76,13 +76,16 @@
         </el-col>
       </el-row>
     </el-row>
+    <div class="profile-body">
+      <ProfileInfo />
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import {
   defaultBg,
-  PenIcon,
+  SmallPenIcon,
   NoteIcon,
   SaveIcon,
   WorkIcon,
@@ -90,14 +93,13 @@ import {
 } from "@/assets/images";
 import { Search } from "@element-plus/icons-vue";
 import { ref } from "vue";
+import ProfileInfo from "@/components/Profile/ProfileInfo.vue";
 const profileImg = ref("");
 const activeTab = ref(1);
 </script>
 
 <style lang="scss" scoped>
-$primaryColor: #6d79e8;
-$gray05: #f5f5f9;
-$gray03: #6d6f81;
+@import "@/styles/custom-var.scss";
 .profile-container {
   .background {
     min-height: 400px;
@@ -112,13 +114,20 @@ $gray03: #6d6f81;
     min-height: 200px;
     width: 100%;
   }
+
+  .profile-body {
+    max-width: 1440px;
+    padding: 16px 72px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
   .profile-info {
     max-width: 1440px;
     padding: 16px 72px;
 
     margin: auto;
     box-shadow: 0px 1px 0px rgba(49, 51, 96, 0.1);
-    > div {
+    > div:first-child {
       margin-bottom: 12px;
     }
     .el-avatar {
